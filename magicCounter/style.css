@@ -1,0 +1,21 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: black; 
+}
+
+.player-count, .starting-life, .start-match, .end-match{
+    font-size: 2em;
+}
+
+.players, .life{
+    background-color: #311b92;
+}
+
+.none{
+    display: none;
+}
+
+.visible{
+    display: block;
+}
