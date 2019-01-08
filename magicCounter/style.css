@@ -1,0 +1,50 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: black; 
+}
+
+/* three players */
+.player-count, .starting-life, .start-match, .end-match{
+    font-size: 2em;
+}
+
+.players, .life{
+    background-color: #311b92;
+}
+
+.none{
+    display: none;
+}
+
+.visible{
+    display: block;
+}
+
+.player-counter-1{
+    background-color: blue;
+    height: 50vh;
+}
+
+.player-counter-2{
+    background-color: red;
+    height: 50vh;
+}
+
+.player-counter-3{
+    background-color: green;
+    height: 50vh;
+}
+
+.life-total, .plus, .minus{
+    display: inline-block;
+    font-size: 5em;
+    position: relative;
+    top: 10vh;
+    margin-right: 4%;
+    left: 15%;
+}
+
+.end-match{
+    position: absolute;
+}
