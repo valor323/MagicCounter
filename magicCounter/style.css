@@ -4,6 +4,7 @@ body{
     background-color: black; 
 }
 
+/* three players */
 .player-count, .starting-life, .start-match, .end-match{
     font-size: 2em;
 }
@@ -33,4 +34,17 @@ body{
 .player-counter-3{
     background-color: green;
     height: 50vh;
+}
+
+.life-total, .plus, .minus{
+    display: inline-block;
+    font-size: 5em;
+    position: relative;
+    top: 10vh;
+    margin-right: 4%;
+    left: 15%;
+}
+
+.end-match{
+    position: absolute;
 }
