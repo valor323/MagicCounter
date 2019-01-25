@@ -36,6 +36,11 @@ body{
     height: 50vh;
 }
 
+.player-counter-4{
+    background-color: orange;
+    height: 50vh;
+}
+
 .life-total, .plus, .minus{
     display: inline-block;
     font-size: 5em;
@@ -47,4 +52,68 @@ body{
 
 .end-match{
     position: absolute;
+}
+
+.twoPlayer{
+    height: 100vh;
+}
+
+.inlineBlock{
+    display: inline-block;
+}
+
+.rotate90 {
+
+    /* Safari */
+    -webkit-transform: rotate(-90deg);
+    
+    /* Firefox */
+    -moz-transform: rotate(-90deg);
+    
+    /* IE */
+    -ms-transform: rotate(-90deg);
+    
+    /* Opera */
+    -o-transform: rotate(-90deg);
+    
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    
+    }
+
+.rotate270{
+      /* Safari */
+      -webkit-transform: rotate(-270deg);
+    
+      /* Firefox */
+      -moz-transform: rotate(-270deg);
+      
+      /* IE */
+      -ms-transform: rotate(-270deg);
+      
+      /* Opera */
+      -o-transform: rotate(-270deg);
+      
+      /* Internet Explorer */
+      filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+      
+      }
+.margin0{
+    margin: 0;
+}
+
+.life-counter-container{
+    width: 100vw;
+}
+
+.text-1{
+    left: 11%;
+    position: relative;
+    top: 37%;
+}
+
+.text-2{
+    position: relative;
+    right: 12%;
+    top: 26%;
 }
