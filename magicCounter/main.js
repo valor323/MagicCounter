@@ -42,15 +42,11 @@ function selectNumberOfPlayers(){
 }
 
 function setPageBasedOnNumberOfPlayers(){
-    debugger;
     if(numberOfPlayers === '2'){
         $('.container').addClass('margin0');
         $('div.player-counter-1').addClass('twoPlayer');
         $('.text-holder-1').addClass('rotate270').addClass('text-1');
         $('.text-holder-2').addClass('rotate90').addClass('text-2');
-        // $('.minus').addClass('rotate90')
-        // $('div.life-total').addClass('rotate90')
-        // $('div.plus').addClass('rotate90');
         $('div.player-counter-2').addClass('twoPlayer');
         $('div.player-counter-3').addClass('none')
         $('div.player-counter-4').addClass('none')
@@ -58,6 +54,11 @@ function setPageBasedOnNumberOfPlayers(){
     if(numberOfPlayers === '3'){
         $('div.player-counter-4').addClass('none')
         $('div.player-counter-1').removeClass('col s6').addClass('col s12')
+        $('.text-holder-1').addClass('player3');
+        $('.container').addClass('margin0');
+    }
+    if(numberOfPlayers === '4'){
+        $('.container').addClass('margin0');
     }
 
 }
@@ -74,11 +75,6 @@ function selectStartingLife(){
        });
 }
 
-function visualizeNumberOfPlayers(){
-
-
-
-}
 
 function initializeLifePage(){
     $('.life-total').text(startingLife)
@@ -91,6 +87,15 @@ function backToMenu(){
     $('.life-counter-container').removeClass('visible')
     $('.life-counter-container').addClass('none')
     $('.setup-container').addClass('visible')
+    $('.container').removeClass('margin0');
+    $('div.player-counter-1').removeClass('twoPlayer');
+    $('.text-holder-1').removeClass('rotate270').removeClass('text-1');
+    $('.text-holder-2').removeClass('rotate90').removeClass('text-2');
+    $('div.player-counter-2').removeClass('twoPlayer');
+    $('div.player-counter-3').removeClass('none')
+    $('div.player-counter-4').removeClass('none')
+    $('div.player-counter-1').removeClass('col s12').addClass('col s6')
+    $('.text-holder-1').removeClass('player3');
 }
 
 function increaseLifeTotal(){
