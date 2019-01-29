@@ -38,7 +38,6 @@ function selectNumberOfPlayers(){
          'background-color':'yellow',
          'color': 'black'
         });
-
 }
 
 function setPageBasedOnNumberOfPlayers(){
@@ -74,7 +73,6 @@ function selectStartingLife(){
         'color': 'black'
        });
 }
-
 
 function initializeLifePage(){
     $('.life-total').text(startingLife)
