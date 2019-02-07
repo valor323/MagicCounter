@@ -4,6 +4,7 @@ $(document).ready(initializeApp)
 function initializeApp(){
     addClickHandlerMenu();
     addClickHandlersGame();
+    $('.dropdown-trigger').dropdown();
 };
 
 //global Variables
@@ -15,6 +16,7 @@ function addClickHandlerMenu(){
     $('.life').on('click', selectStartingLife)
     $('.start-match').on('click', setUpPage)
     $('.end-match').on('click', backToMenu)
+    $('.menu').on('click', menu)
 }
 function addClickHandlersGame(){
     $('.plus').on('click', increaseLifeTotal)
@@ -109,5 +111,12 @@ function decreaseLifetotal(){
     let playersLife =  $(this).next()[0].innerText
     playersLife--
     $(childElement).text(playersLife)
+}
+
+
+function menu(){
+   $('.nav-menu').css('width', '24%');
+   $('.poisen-button').removeClass('none');
+   $('.end-match').removeClass('none')
 }
 

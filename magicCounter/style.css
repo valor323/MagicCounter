@@ -50,10 +50,29 @@ body{
     left: 15%;
 }
 
-.end-match{
-    display: block;
+.center-menu{
+    display: inline-block;
     position: absolute;
-    left: 50%;
+    left: 51%;
+    transform: translateY(-50%) translateX(-50%);
+    top: 50%;
+}
+
+.nav-menu{
+    height: 10%;
+    line-height: 39px;
+    width: 9%;
+}
+
+.sub-menu{
+    bottom: 3vh;
+    position: relative;
+}
+
+.sub-menu-back{
+    display: inline-block;
+    position: absolute;
+    left: 42.5%;
     transform: translateY(-50%) translateX(-50%);
     top: 50%;
 }
@@ -126,5 +145,20 @@ body{
 .player3{
     position: relative;
     left: 20%;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.poisen{
+    width: 100%;
+    position: relative;
+    top: 1vh;
+    display: inline-block;
+}
+
+.poisen-button{
+    width: 29%;
 }
 
