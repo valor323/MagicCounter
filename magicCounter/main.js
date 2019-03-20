@@ -96,6 +96,11 @@ function backToMenu(){
     $('div.player-counter-4').removeClass('none')
     $('div.player-counter-1').removeClass('col s12').addClass('col s6')
     $('.text-holder-1').removeClass('player3');
+    if(!$('.poisen-button').hasClass('none')){
+        $('.nav-menu').css('width', '9%');
+        $('.poisen-button').addClass('none');
+        $('.end-match').addClass('none');
+    }
 }
 
 function increaseLifeTotal(){
@@ -115,8 +120,15 @@ function decreaseLifetotal(){
 
 
 function menu(){
-   $('.nav-menu').css('width', '24%');
-   $('.poisen-button').removeClass('none');
-   $('.end-match').removeClass('none')
+    if($('.poisen-button').hasClass('none')){
+        $('.nav-menu').css('width', '24%');
+        $('.poisen-button').removeClass('none');
+        $('.end-match').removeClass('none');
+    }else{
+        $('.nav-menu').css('width', '9%');
+        $('.poisen-button').addClass('none');
+        $('.end-match').addClass('none');
+    }
+  
 }
 
