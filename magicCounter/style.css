@@ -209,7 +209,25 @@ body{
       font-size: 2em;
   }
 
+  .poisen-select{
+    background-color: yellow;
+  }
   
+
+  .poisenImgDisplay, .poisenDisplay{
+      display: inline-block;
+      position: relative;
+  }
+
+  .poisenImgDisplay{
+      top: 11vh;
+  }
+
+  .poisenDisplay{
+      top: 12.2vh;
+      left: 2%;
+      font-size: 23px;
+  }
 
 
 
