@@ -17,6 +17,7 @@ function addClickHandlerMenu(){
     $('.start-match').on('click', setUpPage)
     $('.end-match').on('click', backToMenu)
     $('.menu').on('click', menu)
+    $('.poisen-picker-1>li').on('click', poisenPicker1);
 }
 function addClickHandlersGame(){
     $('.plus').on('click', increaseLifeTotal)
@@ -130,5 +131,11 @@ function menu(){
         $('.end-match').addClass('none');
     }
   
+}
+
+function poisenPicker1(){
+    let playerPoisened = null;
+    playerPoisened = $(this)[0].textContent;
+    console.log('playerPoisened', playerPoisened);
 }
 
