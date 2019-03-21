@@ -176,13 +176,15 @@ body{
   /* Control the left side */
   .modal-left {
     left: 0;
-    background-color: #111;
+    background-color: black;
+    color: white;
   }
   
   /* Control the right side */
   .modal-right {
     right: 0;
-    background-color: red;
+    background-color: black;
+    color: white;
   }
   
   /* If you want the content centered horizontally and vertically */
@@ -211,6 +213,7 @@ body{
 
   .poisen-select{
     background-color: yellow;
+    color: black;
   }
   
 
@@ -227,6 +230,16 @@ body{
       top: 12.2vh;
       left: 2%;
       font-size: 23px;
+  }
+  .submit-poisen{
+      color: white;
+      font-size: 2em;
+      display: inline-block;
+      position: absolute;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      top: 11%;
+      z-index: 2;
   }
 
 
