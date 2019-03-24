@@ -4,17 +4,29 @@ $(document).ready(initializeApp)
 function initializeApp(){
     addClickHandlerMenu();
     addClickHandlersGame();
+    $('.dropdown-trigger').dropdown();
 };
 
 //global Variables
 let startingLife = null;
 let numberOfPlayers = null;
+let playerPoisened = null;
+let amountPoisened = null;
+let player1Poisened = false;
+let player2Poisened = false;
+let player3Poisened = false;
+let player4Poisened = false;
+
 
 function addClickHandlerMenu(){
     $('.players').on('click', selectNumberOfPlayers)
     $('.life').on('click', selectStartingLife)
     $('.start-match').on('click', setUpPage)
     $('.end-match').on('click', backToMenu)
+    $('.menu').on('click', menu)
+    $('.poisen-picker-1>li').on('click', poisenPicker1);
+    $('.poisen-picker-2>li').on('click', poisenPicker2);
+    $('.submit-poisen').on('click', submitPoisen);
 }
 function addClickHandlersGame(){
     $('.plus').on('click', increaseLifeTotal)
@@ -94,6 +106,11 @@ function backToMenu(){
     $('div.player-counter-4').removeClass('none')
     $('div.player-counter-1').removeClass('col s12').addClass('col s6')
     $('.text-holder-1').removeClass('player3');
+    if(!$('.poisen-button').hasClass('none')){
+        $('.nav-menu').css('width', '9%');
+        $('.poisen-button').addClass('none');
+        $('.end-match').addClass('none');
+    }
 }
 
 function increaseLifeTotal(){
@@ -109,5 +126,73 @@ function decreaseLifetotal(){
     let playersLife =  $(this).next()[0].innerText
     playersLife--
     $(childElement).text(playersLife)
+}
+
+
+function menu(){
+    if($('.poisen-button').hasClass('none')){
+        $('.nav-menu').css('width', '24%');
+        $('.poisen-button').removeClass('none');
+        $('.end-match').removeClass('none');
+    }else{
+        $('.nav-menu').css('width', '9%');
+        $('.poisen-button').addClass('none');
+        $('.end-match').addClass('none');
+    }
+  
+}
+
+function poisenPicker1(){
+    $('.poisen-picker-1>li').removeClass('poisen-select');
+    playerPoisened = $(this)[0].textContent;
+    console.log('playerPoisened', playerPoisened);
+    $(this).addClass('poisen-select');
+}
+
+function poisenPicker2(){
+    $('.poisen-picker-2>li').removeClass('poisen-select');
+    amountPoisened = $(this)[0].textContent;
+    $(this).addClass('poisen-select');
+    console.log('amountPoisened', amountPoisened);
+}
+
+
+function submitPoisen(){
+    let poisenDiv = $('<div>').text(amountPoisened).addClass('poisenDisplay');
+    let poisenImg = $('<img>',
+    {
+        class: "poisenImgDisplay",
+        src: 'images/poisen counter.svg',
+        width: '3vw'
+    }
+    );
+    if(playerPoisened === 'Player 1' && !player1Poisened){
+        player1Poisened = true;
+        $('.player-counter-1').append(poisenImg).append(poisenDiv);
+    }
+    if(playerPoisened === 'Player 2' && !player2Poisened){
+        player2Poisened = true;
+        $('.player-counter-2').append(poisenImg).append(poisenDiv);
+    }
+    if(playerPoisened === 'Player 3' && !player3Poisened){
+        player3Poisened = true;
+        $('.player-counter-3').append(poisenImg).append(poisenDiv);
+    }
+    if(playerPoisened === 'Player 4' && !player4Poisened){
+        player4Poisened = true;
+        $('.player-counter-4').append(poisenImg).append(poisenDiv);
+    }
+    if(playerPoisened === 'Player 1' && player1Poisened){
+        $('.player-counter-1 > .poisenDisplay').text(amountPoisened);
+    }
+    if(playerPoisened === 'Player 2' && player2Poisened){
+        $('.player-counter-2 > .poisenDisplay').text(amountPoisened);
+    }
+    if(playerPoisened === 'Player 3' && player3Poisened){
+        $('.player-counter-3 > .poisenDisplay').text(amountPoisened);
+    }
+    if(playerPoisened === 'Player 4' && player4Poisened){
+        $('.player-counter-4 > .poisenDisplay').text(amountPoisened);
+    }
 }
 

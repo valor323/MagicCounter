@@ -50,10 +50,29 @@ body{
     left: 15%;
 }
 
-.end-match{
-    display: block;
+.center-menu{
+    display: inline-block;
     position: absolute;
-    left: 50%;
+    left: 51%;
+    transform: translateY(-50%) translateX(-50%);
+    top: 50%;
+}
+
+.nav-menu{
+    height: 10%;
+    line-height: 39px;
+    width: 9%;
+}
+
+.sub-menu{
+    bottom: 3vh;
+    position: relative;
+}
+
+.sub-menu-back{
+    display: inline-block;
+    position: absolute;
+    left: 42.5%;
     transform: translateY(-50%) translateX(-50%);
     top: 50%;
 }
@@ -127,4 +146,101 @@ body{
     position: relative;
     left: 20%;
 }
+
+.hidden{
+    visibility: hidden;
+}
+
+.poisen{
+    width: 100%;
+    position: relative;
+    top: 1vh;
+    display: inline-block;
+}
+
+.poisen-button{
+    width: 29%;
+}
+
+
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Control the left side */
+  .modal-left {
+    left: 0;
+    background-color: black;
+    color: white;
+  }
+  
+  /* Control the right side */
+  .modal-right {
+    right: 0;
+    background-color: black;
+    color: white;
+  }
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  /* Style the image inside the centered container, if needed */
+  .centered img {
+    width: 150px;
+    border-radius: 50%;
+  }
+
+  .modal-dialog{
+      height: 100%;
+      margin: 0;
+  }
+
+  .poisen-picker-1, .poisen-picker-2{
+      font-size: 2em;
+  }
+
+  .poisen-select{
+    background-color: yellow;
+    color: black;
+  }
+  
+
+  .poisenImgDisplay, .poisenDisplay{
+      display: inline-block;
+      position: relative;
+  }
+
+  .poisenImgDisplay{
+      top: 11vh;
+  }
+
+  .poisenDisplay{
+      top: 12.2vh;
+      left: 2%;
+      font-size: 23px;
+  }
+  .submit-poisen{
+      color: white;
+      font-size: 2em;
+      display: inline-block;
+      position: absolute;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      top: 11%;
+      z-index: 2;
+  }
+
+
 
